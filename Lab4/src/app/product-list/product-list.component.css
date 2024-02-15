@@ -1,0 +1,30 @@
+.product {
+    border: solid 1px;
+    border-color: gray;
+    border-radius: 15px;
+    padding: 20px;
+    width: 40%;
+}
+
+.products-list {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
