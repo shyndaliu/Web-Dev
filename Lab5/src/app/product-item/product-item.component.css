@@ -63,3 +63,7 @@ h3 {
 .like {
     background-color: transparent;
 }
+
+.clicked {
+    color: red;
+}

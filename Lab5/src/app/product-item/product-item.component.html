@@ -20,8 +20,11 @@
     <p *ngIf="product.description">
         {{ product.description }}
     </p>
-    <div class="like-holder"><button class="like"><em class="material-icons">favorite</em></button>
-        {{ product.likes}}</div>
+    <div class="like-holder"><button class="like" (click)="likeProduct()">
+            <em class="material-icons" *ngIf="!liked">favorite</em>
+            <em class="material-icons clicked" *ngIf="liked">favorite</em></button>
+        {{ product.likes}}
+    </div>
 
     <div class="button-holder">
         <button type="button" (click)="share(product.link)">

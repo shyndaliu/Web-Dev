@@ -10,6 +10,7 @@ import { Product } from '../product';
 export class ProductItemComponent {
   @Input() product: Product;
   @Output() remove = new EventEmitter();
+  liked: boolean = false;
   constructor() {
     this.product = new Product(0, '', 0, '', 0, '', '');
   }
@@ -27,5 +28,13 @@ export class ProductItemComponent {
 
   removeProduct() {
     this.remove.emit(this.product.id);
+  }
+  likeProduct() {
+    if (this.liked) {
+      this.product.likes -= 1;
+    } else {
+      this.product.likes += 1;
+    }
+    this.liked = !(this.liked);
   }
 }
