@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -15,7 +14,6 @@ import { ProductItemComponent } from './product-item/product-item.component';
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatIconModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent },
     ])

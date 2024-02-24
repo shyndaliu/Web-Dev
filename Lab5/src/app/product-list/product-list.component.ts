@@ -23,6 +23,7 @@ import { Product } from '../product';
 export class ProductListComponent {
   @Input() categoryId: number = 0;
   products: Product[] = [];
+  category: string = '';
   ngOnInit(): void {
     this.loadProducts();
   }
@@ -34,6 +35,7 @@ export class ProductListComponent {
       ps.push(new Product(product.id, product.name, product.price, product.description, product.likes, product.img, product.link));
     }
     this.products = ps;
+    this.category = categories[this.categoryId].title;
     console.log(this.categoryId);
   }
   onProductRemove(id: number) {
