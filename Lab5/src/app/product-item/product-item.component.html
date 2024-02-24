@@ -1,0 +1,38 @@
+<div class="product-holder">
+    <div class="image-holder">
+
+
+        <img [src]="product.img">
+    </div>
+    <div class="title-holder">
+
+
+        <h3>
+            <a [title]="product.name + ' details'" href="{{product.link}}">
+                {{ product.name }}
+            </a>
+        </h3>
+    </div>
+    <h4>
+        {{product.price}}KZT
+    </h4>
+
+    <p *ngIf="product.description">
+        {{ product.description }}
+    </p>
+    <div class="like-holder"><button class="like"><mat-icon>favorite_border</mat-icon></button>
+        {{ product.likes}}</div>
+
+    <div class="button-holder">
+        <button type="button" (click)="share(product.link)">
+            Share on WatsApp
+        </button>
+        <button type="button" (click)="sharetg(product.link)">
+            Share on Telegram
+        </button>
+    </div>
+    <button class="not-interested" type="button" (click)="removeProduct()">
+        Not interested
+    </button>
+
+</div>

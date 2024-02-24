@@ -1,0 +1,16 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <div class="button-holder">
+    <button (click)="selectCategory(0)">Category 1</button>
+    <button (click)="selectCategory(1)">Category 2</button>
+    <button (click)="selectCategory(2)">Category 3</button>
+    <button (click)="selectCategory(3)">Category 4</button>
+  </div>
+
+
+  <app-product-list *ngIf="selectedCategoryId==0" [categoryId]="0"></app-product-list>
+  <app-product-list *ngIf="selectedCategoryId==1" [categoryId]="1"></app-product-list>
+  <app-product-list *ngIf="selectedCategoryId==2" [categoryId]="2"></app-product-list>
+  <app-product-list *ngIf="selectedCategoryId==3" [categoryId]="3"></app-product-list>
+</div>
