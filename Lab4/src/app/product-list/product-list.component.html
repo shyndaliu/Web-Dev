@@ -4,7 +4,7 @@
     <div class="product" *ngFor="let product of products">
 
         <h3>
-            <a [title]="product.name + ' details'">
+            <a [title]="product.name + ' details'" href="{{product.link}}">
                 {{ product.name }}
             </a>
         </h3>
